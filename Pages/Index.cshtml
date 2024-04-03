@@ -1,0 +1,39 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Список Логов</h1>
+
+<button id="getDataBtn">Получить список</button>
+
+<div id="dataContainer">     
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('getDataBtn').addEventListener('click', function () {
+            fetch('/Index?handler=GetData')
+                .then(response => response.json())
+                .then(data => {
+                    // Очищаем контейнер данных перед заполнением
+                    document.getElementById('dataContainer').innerHTML = '';
+
+                    // Отображение каждого элемента данных списком
+                    data.forEach(item => {
+                        var div = document.createElement('div');
+                        div.innerHTML = `
+                                    <p>ID: ${item.id}</p>
+                                    <p>Time: ${item.time}</p>
+                                    <p>IsChecked: ${item.isChecked}</p>
+                                    <hr /> <!-- Горизонтальная линия между элементами -->
+                                `;
+                        document.getElementById('dataContainer').appendChild(div);
+                    });
+                });
+        });
+    </script>
+}
+
+

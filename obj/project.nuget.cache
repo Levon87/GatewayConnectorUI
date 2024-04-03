@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3n0E/sPMKSe0yZ6mAbnUM1nBheQbpo63z21rbfriVpla2QwXOCsN+IVtGOnEk39Lv15P9w8DEcuvSYlwaZci+Q==",
+  "success": true,
+  "projectFilePath": "E:\\TesCryptoPro\\LogsUI\\LogsUI\\LogsUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Levon\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
